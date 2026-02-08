@@ -1,0 +1,16 @@
+export class L1ToL2Message {
+  constructor(
+    private data: any,
+    private guarded?: GuardedAction
+  ) {}
+
+  async redeem() {
+    if (!this.guarded) return this._redeem()
+
+    return this.guarded.run('l1l2.redeem', this.data, () => this._redeem())
+  }
+
+  private async _redeem() {
+    // existing logic
+  }
+}
