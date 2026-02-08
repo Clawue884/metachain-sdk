@@ -1,0 +1,35 @@
+{
+  "title": "MetaChain SDK Guardian",
+  "panels": [
+    {
+      "title": "Bridge Ops Latency",
+      "type": "graph",
+      "targets": [
+        {
+          "expr": "sdk_eth_deposit_latency_ms",
+          "legendFormat": "ETH Deposit Latency"
+        }
+      ]
+    },
+    {
+      "title": "ERC20 Withdraw Ops",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "sdk_erc20_withdraw_total",
+          "legendFormat": "ERC20 Withdraw Count"
+        }
+      ]
+    },
+    {
+      "title": "L1→L2 Redeem Latency",
+      "type": "graph",
+      "targets": [
+        {
+          "expr": "sdk_l1l2_redeem_latency_ms",
+          "legendFormat": "Redeem Latency"
+        }
+      ]
+    }
+  ]
+}
